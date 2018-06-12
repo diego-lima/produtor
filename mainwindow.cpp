@@ -73,16 +73,14 @@ void MainWindow::desconectar()
 {
     socket->disconnectFromHost();
     if(socket->waitForConnected(3000)){
-        QStringList list("Connected");
-        ui->listWidget->addItems(list);
-      qDebug() << "Connected";
-//       ui->labelConnect->setText("Connected to "+ip_addr);
+      qDebug() << "Connected to "+ip_addr;
+       QStringList list("Connected to "+ip_addr);
+       ui->listWidget->addItems(list);
     }
     else{
-//        QStringList list("Disconnected");
-//        ui->listWidget->addItems(list);
+        QStringList list("Disconnected");
+        ui->listWidget->addItems(list);
       qDebug() << "Disconnected";
-//       ui->labelConnect->setText("Disconnected");
     }
 }
 
@@ -102,6 +100,7 @@ void MainWindow::enviarInfo(){
     str = "set "+ QString::number(msecdate) + " " + QString::number((float)inferior+((float)qrand()/(float)RAND_MAX)*(float)(superior-inferior))+"\r\n";
     QStringList list(str);
     ui->listWidget->addItems(list);
+    ui->listWidget->scrollToBottom();
       qDebug() << str;
       qDebug() << socket->write(str.toStdString().c_str()) << " bytes written";
       if(socket->waitForBytesWritten(3000)){
