@@ -1,0 +1,67 @@
+\hypertarget{classMainWindow}{}\section{Main\+Window Class Reference}
+\label{classMainWindow}\index{Main\+Window@{Main\+Window}}
+
+
+A classe \hyperlink{classMainWindow}{Main\+Window} é a classe que gera a janela principal.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+
+
+Inheritance diagram for Main\+Window\+:
+% FIG 0
+
+
+Collaboration diagram for Main\+Window\+:
+% FIG 1
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classMainWindow_ac5b669957c442b6eb68573dacfce33e1}{tcp\+Connect} ()\hypertarget{classMainWindow_ac5b669957c442b6eb68573dacfce33e1}{}\label{classMainWindow_ac5b669957c442b6eb68573dacfce33e1}
+
+\begin{DoxyCompactList}\small\item\em O Metodo tcp\+Connect conecta a janela ao servidor. \end{DoxyCompactList}\item 
+void \hyperlink{classMainWindow_a4d22c4c7afc7ba0a2fa4c70515c85dda}{tcp\+Disconnect} ()\hypertarget{classMainWindow_a4d22c4c7afc7ba0a2fa4c70515c85dda}{}\label{classMainWindow_a4d22c4c7afc7ba0a2fa4c70515c85dda}
+
+\begin{DoxyCompactList}\small\item\em O Metodo tcp\+Disconnect desconecta a janela ao servidor. \end{DoxyCompactList}\item 
+void \hyperlink{classMainWindow_a54e0fc142f56effde1e75f5269996a2f}{change\+IP} (Q\+String \+\_\+\+IP)\hypertarget{classMainWindow_a54e0fc142f56effde1e75f5269996a2f}{}\label{classMainWindow_a54e0fc142f56effde1e75f5269996a2f}
+
+\begin{DoxyCompactList}\small\item\em O Metodo change\+IP muda o IP do servidor conectado. \end{DoxyCompactList}\item 
+void \hyperlink{classMainWindow_a85b318a70c039220b2e6c76f9cb1a1a5}{set\+Min\+Data} (int \+\_\+min)\hypertarget{classMainWindow_a85b318a70c039220b2e6c76f9cb1a1a5}{}\label{classMainWindow_a85b318a70c039220b2e6c76f9cb1a1a5}
+
+\begin{DoxyCompactList}\small\item\em O Metodo set\+Min\+Data muda o minimo dos dados aleatorios. \end{DoxyCompactList}\item 
+void \hyperlink{classMainWindow_ab283205b2000c6f18261b729c6d09b53}{set\+Max\+Data} (int \+\_\+max)\hypertarget{classMainWindow_ab283205b2000c6f18261b729c6d09b53}{}\label{classMainWindow_ab283205b2000c6f18261b729c6d09b53}
+
+\begin{DoxyCompactList}\small\item\em O Metodo set\+Max\+Data muda o maximo dos dados aleatorios. \end{DoxyCompactList}\item 
+void \hyperlink{classMainWindow_ae3e0a43bdcb1908e339315208ef8a6d7}{liga\+Timer} ()\hypertarget{classMainWindow_ae3e0a43bdcb1908e339315208ef8a6d7}{}\label{classMainWindow_ae3e0a43bdcb1908e339315208ef8a6d7}
+
+\begin{DoxyCompactList}\small\item\em O Metodo liga\+Timer liga o timer. \end{DoxyCompactList}\item 
+void \hyperlink{classMainWindow_a67c1d3d99eb7c4b5b4d3d16867eb7ca0}{desliga\+Timer} ()\hypertarget{classMainWindow_a67c1d3d99eb7c4b5b4d3d16867eb7ca0}{}\label{classMainWindow_a67c1d3d99eb7c4b5b4d3d16867eb7ca0}
+
+\begin{DoxyCompactList}\small\item\em O Metodo desliga\+Timer desliga o timer. \end{DoxyCompactList}\item 
+void \hyperlink{classMainWindow_ab5db2dcd9b9592285a18fa7d19256e6a}{set\+Timer} (int \+\_\+t)\hypertarget{classMainWindow_ab5db2dcd9b9592285a18fa7d19256e6a}{}\label{classMainWindow_ab5db2dcd9b9592285a18fa7d19256e6a}
+
+\begin{DoxyCompactList}\small\item\em O Metodo set\+Timer configura o timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Main\+Window} (Q\+Widget $\ast$parent=0)\hypertarget{classMainWindow_a8b244be8b7b7db1b08de2a2acb9409db}{}\label{classMainWindow_a8b244be8b7b7db1b08de2a2acb9409db}
+
+\item 
+void {\bfseries timer\+Event} (Q\+Timer\+Event $\ast$event)\hypertarget{classMainWindow_aaa425b1554af3c1f58cc70b4815082ae}{}\label{classMainWindow_aaa425b1554af3c1f58cc70b4815082ae}
+
+\item 
+void \hyperlink{classMainWindow_afdfeb13ec363b0eb8ecacaf0aa13b605}{put\+Data} ()\hypertarget{classMainWindow_afdfeb13ec363b0eb8ecacaf0aa13b605}{}\label{classMainWindow_afdfeb13ec363b0eb8ecacaf0aa13b605}
+
+\begin{DoxyCompactList}\small\item\em O métoodo put\+Data joga os dados pro servidor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A classe \hyperlink{classMainWindow}{Main\+Window} é a classe que gera a janela principal. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+mainwindow.\+h\item 
+mainwindow.\+cpp\end{DoxyCompactItemize}
