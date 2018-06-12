@@ -60,13 +60,12 @@ void MainWindow::conectar(){
       QStringList list("Connected");
       ui->listWidget->addItems(list);
     qDebug() << "Connected";
-      ui->labelConnect->setText("Connected to "+ip_addr);
+//      ui->labelConnect->setText("Connected to "+ip_addr);
   }
   else{
-      QStringList list("Connection error");
-      ui->listWidget->addItems(list);
+//      QStringList list("Connection error");
+//      ui->listWidget->addItems(list);
     qDebug() <<"Connection error";
-    ui->labelConnect->setText("Connection error");
   }
 }
 
@@ -77,13 +76,13 @@ void MainWindow::desconectar()
         QStringList list("Connected");
         ui->listWidget->addItems(list);
       qDebug() << "Connected";
-       ui->labelConnect->setText("Connected to "+ip_addr);
+//       ui->labelConnect->setText("Connected to "+ip_addr);
     }
     else{
-        QStringList list("Disconnected");
-        ui->listWidget->addItems(list);
+//        QStringList list("Disconnected");
+//        ui->listWidget->addItems(list);
       qDebug() << "Disconnected";
-       ui->labelConnect->setText("Disconnected");
+//       ui->labelConnect->setText("Disconnected");
     }
 }
 
