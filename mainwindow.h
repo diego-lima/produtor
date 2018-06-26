@@ -25,6 +25,8 @@ public:
   void timerEvent(QTimerEvent *event);
   ~MainWindow();
   void enviarInfo();
+
+  int frand();
 public slots:
   void conectar();
 

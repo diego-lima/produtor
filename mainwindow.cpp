@@ -1,6 +1,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QDateTime>
+#include <QString>
+#include <QTextBrowser>
+#include <QTimer>
 
 MainWindow::MainWindow(QWidget *parent) :
   QMainWindow(parent), ui(new Ui::MainWindow){
@@ -97,7 +100,8 @@ void MainWindow::enviarInfo(){
   if(socket->state()== QAbstractSocket::ConnectedState){
 
     msecdate = QDateTime::currentDateTime().toMSecsSinceEpoch();
-    str = "set "+ QString::number(msecdate) + " " + QString::number((float)inferior+((float)qrand()/(float)RAND_MAX)*(float)(superior-inferior))+"\r\n";
+//    str = "set "+ QString::number(msecdate) + " " + QString::number((float)inferior+((float)qrand()/(float)RAND_MAX)*(float)(superior-inferior))+"\r\n";
+    str = "set "+ QString::number(msecdate) + " " + QString::number(frand())+"\r\n";
     QStringList list(str);
     ui->listWidget->addItems(list);
     ui->listWidget->scrollToBottom();
@@ -152,4 +156,20 @@ void MainWindow::setTimer(int _t)
 MainWindow::~MainWindow(){
   delete socket;
   delete ui;
+}
+
+int MainWindow::frand(){
+    int i;
+    i = qrand()%ui->SliderMax->value()+ui->SliderMin->value();
+    while( i > ui->SliderMax->value() || i < ui->SliderMin->value() ){
+
+        if(ui->SliderMax->value() < ui->SliderMin->value() ){
+            i = ui->SliderMax->value();
+            break;
+        }
+        i = qrand()%ui->SliderMax->value()+ui->SliderMin->value();
+
+    }
+    return i;
+
 }
